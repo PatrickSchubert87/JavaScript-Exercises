@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises and Tests</title>
+</head>
+<body>
+    <script>
+        const umbrella = {
+    color: 'red',
+    isOpen: false,
+    open: function(){
+        if(umbrella.isOpen === true){
+            return "The umbrella is already opened.";
+        } else {
+            umbrella.isOpen = true;
+            return "Umbrella was opened.";
+        }
+    },
+    close: function(){
+        if(umbrella.isOpen !== true){
+            return "The umbrella is already opened.";
+        } else {
+            umbrella.isOpen = false;
+            return "Umbrella was opened.";
+        }
+    }
+};
+
+console.log(umbrella.color);
+console.log(umbrella.isOpen);
+console.log(umbrella.open());
+console.log(umbrella.isOpen);
+console.log(umbrella.close());
+console.log(umbrella.isOpen);
+    </script>
+    <script>
+        var person = {
+    firstName : "John",
+    lastName : "Smith",
+    age : 23
+};
+
+function printFullName()
+{
+    console.log(this.firstName + " " + this.lastName);
+}
+
+function printDetails()
+{
+    console.log(this.firstName + " is " + this.age + " years old");
+}
+
+// TODO: create bound copies of printFullName and printDetails.
+var boundPrintFullName = printFullName.bind(person);
+var boundPrintDetails = printDetails.bind(person);
+
+boundPrintFullName();
+boundPrintDetails();
+
+console.log(boundPrintFullName);
+console.log(boundPrintDetails);
+    </script>
+</body>
+</html>
