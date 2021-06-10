@@ -28,8 +28,11 @@ var facebookProfile = {
     postMessage: function postMessage() {
         var newMessage = 'new Message';
         this.messages.push(newMessage);
-    }
+    },
     
+    deleteMessage: function deleteMessage(index) {
+        
+    }
 }
 
 console.log(facebookProfile.messages);
