@@ -60,5 +60,11 @@ Magazine.prototype = Object.create(Book.prototype);
 // Instantiate Magazine Object
 const mag1 = new Magazine('Meg One', 'John Doe', '2018', 'Jun');
 
-console.log(mag1,getSummary());
-console.log(mag1,getAge());
+console.log(mag1.getSummary());
+console.log(mag1.getAge());
+console.log(mag1);
+
+// Use Magazine Constructor
+Magazine.prototype.constructor = Magazine;
+
+console.log(mag1);
