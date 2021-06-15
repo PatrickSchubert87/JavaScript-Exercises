@@ -25,16 +25,46 @@ var facebookProfile = {
     friends: 300,
     messages: ['Message One', ' Message Two', 'Message Three'],
     
-    postMessage: function postMessage() {
-        var newMessage = 'new Message';
-        this.messages.push(newMessage);
+    postMessage: function postMessage(message) {
+        message = 'new Message';
+        this.messages.push(message);
+    },
+
+    deleteFirstMessage: function deleteMessage() {
+        n = 1;
+        this.messages.shift();
+    },
+
+    deleteLastMessage: function deleteMessage() {
+        n = 1;
+        this.messages.pop();
     },
     
-    deleteMessage: function deleteMessage(index) {
-        
+    deleteMessageGivenOnIndex: function deleteMessage(index, n) {
+        n = 1;
+        index = this.messages.splice(index, n);
+    },
+
+    addFriend: function addFriend() {
+        this.friends++;
+    },
+
+    removeFriend: function removeFriend() {
+        this.friends--;
     }
 }
 
 console.log(facebookProfile.messages);
 facebookProfile.postMessage();
 console.log(facebookProfile.messages);
+facebookProfile.deleteFirstMessage();
+console.log(facebookProfile.messages);
+facebookProfile.deleteLastMessage();
+console.log(facebookProfile.messages);
+facebookProfile.deleteMessageGivenOnIndex();
+console.log(facebookProfile.messages);
+console.log(facebookProfile.friends);
+facebookProfile.addFriend();
+console.log(facebookProfile.friends);
+facebookProfile.removeFriend();
+console.log(facebookProfile.friends);
