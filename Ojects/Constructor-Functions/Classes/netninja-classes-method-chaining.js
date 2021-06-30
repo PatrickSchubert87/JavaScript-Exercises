@@ -1,3 +1,7 @@
+/**
+ * Methode chaining
+ * @youtube_link https://www.youtube.com/watch?v=8x1fygdWabY&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7&index=7
+ */
 class User {
     constructor(email, name) {
         this.email = email;

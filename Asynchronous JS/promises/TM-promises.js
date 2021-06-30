@@ -1,6 +1,7 @@
 /**
  * This is the same code as a Promises.
  * Instead of the callback(), I use a Promise().
+ * @youtube_link https://www.youtube.com/watch?v=PoRJizFvM7s&t=640s 9:30 - 15:20
  */
 const posts = [
     { title: 'Post One', body: 'This is post one'},

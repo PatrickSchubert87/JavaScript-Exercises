@@ -1,6 +1,7 @@
 /**
- * This is the same code as a Promises().
- * Instead of using a callback(), or a Promise() I use a Async & Await().
+ * This is the same code as another variataion of the Promises().
+ * Instead of calling everytime .then() we can run the Promises.all().
+ * @youtube_link https://www.youtube.com/watch?v=PoRJizFvM7s&t=925s 15:25 - 19:55
  */
 const posts = [
     { title: 'Post One', body: 'This is post one'},
@@ -37,22 +38,10 @@ function createPost(post) {
 // .then(getPosts)
 // .catch(err => console.log(err));
 
-// async / await
-async function init() {
-    await createPost({ title: 'Post Three', body: 'This is post three'});
+// Promise.all()
+const promise1 = Promise.resolve('Hello World');
+const promise2 = 10;
+const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Godbye'));
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
 
-    getPosts();
-}
-
-init();
-
-// async / await / fetch
-async function fetchUsers() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-
-    const data = await res.json();
-
-    console.log(data);
-}
-
-fetchUsers();
+Promise.all([promise1, promise2, promise3, promise4]).then(values => console.log(values));

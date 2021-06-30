@@ -1,3 +1,7 @@
+/**
+ * Object Literal
+ * @youtube_link https://www.youtube.com/watch?v=7d9H34ZVRPg&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7&index=2
+ */
 var userOne = {
     email: 'ryun@ninja.com',
     name: 'Ryun',
